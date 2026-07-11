@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amor que Transforma – Devocional de 7 Dias</title>
+  <meta name="description" content="Um devocional de 7 dias para mulheres cristãs sobre amor, relacionamentos e identidade em Cristo. Por R$9,90.">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #F5EFE0; --cream-dark: #EDE4CC; --green: #2D4A2D;
+      --green-light: #3D6B3D; --gold: #B8963E; --gold-light: #D4AF5A;
+      --text: #2C2C2C; --text-light: #555;
+    }
+    body { font-family: 'Lato', sans-serif; background-color: var(--cream); color: var(--text); line-height: 1.7; }
+
+    .hero { background: linear-gradient(160deg, #2D4A2D 0%, #1e3320 100%); padding: 60px 20px 70px; text-align: center; }
+    .hero .marca { font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 30px; }
+    .hero img.capa { width: 240px; max-width: 80%; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); margin-bottom: 36px; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3rem); color: #fff; line-height: 1.2; margin-bottom: 16px; }
+    .hero h1 em { color: var(--gold-light); font-style: italic; }
+    .hero .sub { font-size: 1.1rem; color: rgba(255,255,255,0.82); max-width: 520px; margin: 0 auto 36px; }
+    .btn-primary { display: inline-block; background: var(--gold); color: #fff; font-weight: 700; font-size: 1rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 16px 40px; border-radius: 4px; transition: background 0.2s, transform 0.2s; }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+    .hero .preco-hero { margin-top: 16px; color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+    .hero .preco-hero strong { color: var(--gold-light); font-size: 1.2rem; }
+
+    section { padding: 60px 20px; }
+    .container { max-width: 680px; margin: 0 auto; }
+
+    .para-voce { background: #fff; }
+    .para-voce h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); color: var(--green); margin-bottom: 24px; text-align: center; }
+    .para-voce p { color: var(--text-light); margin-bottom: 14px; font-size: 1.05rem; }
+    .check-list { list-style: none; margin-top: 24px; }
+    .check-list li { padding: 10px 0 10px 36px; position: relative; border-bottom: 1px solid #f0e8d8; color: var(--text); font-size: 1.02rem; }
+    .check-list li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); font-size: 0.85rem; top: 12px; }
+
+    .conteudo { background: var(--cream); }
+    .conteudo h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--green); margin-bottom: 32px; text-align: center; }
+    .dias-grid { display: grid; gap: 16px; }
+    .dia-card { background: #fff; border-left: 4px solid var(--gold); border-radius: 4px; padding: 18px 20px; }
+    .dia-card .dia-num { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); font-weight: 700; margin-bottom: 4px; }
+    .dia-card .dia-titulo { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--green); font-weight: 600; }
+    .dia-card .dia-desc { font-size: 0.9rem; color: var(--text-light); margin-top: 4px; }
+
+    .oferta { background: var(--green); }
+    .oferta h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); color: #fff; margin-bottom: 8px; text-align: center; }
+    .oferta .oferta-sub { text-align: center; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
+    .oferta-box { background: var(--cream); border-radius: 8px; padding: 36px 32px; text-align: center; }
+    .oferta-box .titulo-prod { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--green); margin-bottom: 16px; }
+    .oferta-box .incluso { list-style: none; text-align: left; margin-bottom: 28px; }
+    .oferta-box .incluso li { padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--cream-dark); font-size: 0.97rem; }
+    .oferta-box .incluso li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+    .preco-box { margin: 24px 0; }
+    .preco-box .por { font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--green); font-weight: 700; line-height: 1; }
+    .preco-box .parcela { font-size: 0.85rem; color: var(--text-light); margin-top: 4px; }
+    .btn-comprar { display: inline-block; background: var(--gold); color: #fff; font-weight: 700; font-size: 1.05rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 18px 48px; border-radius: 4px; width: 100%; transition: background 0.2s; }
+    .btn-comprar:hover { background: var(--gold-light); }
+    .garantia-nota { font-size: 0.8rem; color: var(--text-light); margin-top: 16px; }
+
+    .garantia { background: #fff; text-align: center; }
+    .garantia h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--green); margin-bottom: 16px; }
+    .garantia .icone { font-size: 3rem; margin-bottom: 16px; }
+    .garantia p { color: var(--text-light); max-width: 500px; margin: 0 auto; }
+
+    .faq { background: var(--cream); }
+    .faq h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 3vw, 1.9rem); color: var(--green); margin-bottom: 32px; text-align: center; }
+    .faq-item { background: #fff; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px; }
+    .faq-item .pergunta { font-weight: 700; color: var(--green); margin-bottom: 8px; }
+    .faq-item .resposta { color: var(--text-light); font-size: 0.95rem; }
+
+    .cta-direct { background: var(--cream-dark); text-align: center; }
+    .cta-direct h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 3vw, 1.7rem); color: var(--green); margin-bottom: 12px; }
+    .cta-direct p { color: var(--text-light); margin-bottom: 24px; }
+    .btn-direct { display: inline-block; background: var(--green); color: #fff; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 14px 36px; border-radius: 4px; }
+    .btn-direct:hover { background: var(--green-light); }
+
+    footer { background: var(--green); color: rgba(255,255,255,0.6); text-align: center; padding: 32px 20px; font-size: 0.82rem; }
+    footer a { color: var(--gold-light); text-decoration: none; }
+    .divisor { text-align: center; color: var(--gold); font-size: 1.2rem; letter-spacing: 8px; margin: 8px 0; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <p class="marca">✦ Pão Diário Digital ✦</p>
+  <img class="capa" src="https://petbarroso.github.io/amor-que-transforma/capa_do_ebook.png" alt="Capa do ebook Amor que Transforma" />
+  <h1>O amor que você busca<br>começa <em>n'Ele</em></h1>
+  <p class="sub">Um devocional de 7 dias para mulheres cristãs que desejam amar de forma saudável, inteira e enraizada em Deus.</p>
+  <a href="https://pay.kiwify.com.br/7UB9LSU" class="btn-primary">Quero meu ebook agora</a>
+  <p class="preco-hero">Por apenas <strong>R$9,90</strong> — acesso imediato</p>
+</section>
+
+<section class="para-voce">
+  <div class="container">
+    <h2>Esse devocional foi escrito para você que…</h2>
+    <p>Sabe o que é amar de verdade — mas às vezes se perde dentro dos relacionamentos. Que já ficou pequena para caber na vida de alguém. Que buscou nas pessoas o que só Deus pode dar.</p>
+    <p>Mas também para a mulher que quer crescer. Que quer amar melhor, receber amor melhor, e entender que seu coração foi feito para ser guardado — não desperdiçado.</p>
+    <ul class="check-list">
+      <li>Já se perdeu dentro de um relacionamento tentando agradar</li>
+      <li>Sente dificuldade em estabelecer limites sem se sentir culpada</li>
+      <li>Carrega mágoas que ainda não conseguiu perdoar</li>
+      <li>Quer entender o que a Palavra diz sobre amor de verdade</li>
+      <li>Deseja se enxergar com os olhos de Deus antes de qualquer pessoa</li>
+    </ul>
+  </div>
+</section>
+
+<section class="conteudo">
+  <div class="container">
+    <h2>O que você vai encontrar nos 7 dias</h2>
+    <div class="dias-grid">
+      <div class="dia-card">
+        <div class="dia-num">Dia 1</div>
+        <div class="dia-titulo">O Amor que Veio Primeiro</div>
+        <div class="dia-desc">Antes de aprender a amar qualquer pessoa, você foi amada. O amor não começa em você — ele começa n'Ele.</div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-num">Dia 2</div>
+        <div class="dia-titulo">Amor Não É Perder a Si Mesma</div>
+        <div class="dia-desc">Deus nunca pediu que você desaparecesse dentro de um relacionamento. Você foi criada com identidade, dons e propósito.</div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-num">Dia 3</div>
+        <div class="dia-titulo">Quando o Amor Dói</div>
+        <div class="dia-desc">Sua dor não é invisível para Deus. Ele está especialmente perto dos que têm o coração quebrado.</div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-num">Dia 4</div>
+        <div class="dia-titulo">A Arte do Perdão</div>
+        <div class="dia-desc">Perdoar não é fingir que não doeu. É soltar o direito de cobrar — e libertar a si mesma da prisão do ressentimento.</div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-num">Dia 5</div>
+        <div class="dia-titulo">Limites São um Ato de Amor</div>
+        <div class="dia-desc">Guardar o coração exige discernimento. Você não tem obrigação de aceitar o que diminui.</div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-num">Dia 6</div>
+        <div class="dia-titulo">O Amor que Constrói</div>
+        <div class="dia-desc">1 Coríntios 13 não é só para casamentos. É uma descrição de caráter — e uma pergunta silenciosa sobre o amor que você dá e recebe.</div>
+      </div>
+      <div class="dia-card">
+        <div class="dia-num">Dia 7</div>
+        <div class="dia-titulo">Completa n'Ele</div>
+        <div class="dia-desc">Você não precisa de um relacionamento para ser inteira. Você já é completa em Cristo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="oferta">
+  <div class="container">
+    <h2>Garanta o seu agora</h2>
+    <p class="oferta-sub">Acesso imediato após a confirmação do pagamento</p>
+    <div class="oferta-box">
+      <div class="titulo-prod">Amor que Transforma</div>
+      <ul class="incluso">
+        <li>Devocional completo de 7 dias em PDF</li>
+        <li>Versículo bíblico + reflexão para cada dia</li>
+        <li>Oração guiada diária</li>
+        <li>Perguntas para meditação e diário</li>
+        <li>Acesso imediato e para sempre</li>
+      </ul>
+      <div class="preco-box">
+        <div class="por">R$9,90</div>
+        <div class="parcela">pagamento único — acesso vitalício</div>
+      </div>
+      <a href="https://pay.kiwify.com.br/7UB9LSU" class="btn-comprar">Quero meu ebook agora →</a>
+      <p class="garantia-nota">🔒 Pagamento seguro via Kiwify · Cartão, Pix ou Boleto</p>
+    </div>
+  </div>
+</section>
+
+<section class="garantia">
+  <div class="container">
+    <div class="icone">🛡️</div>
+    <h2>Satisfação garantida</h2>
+    <div class="divisor">✦ ✦ ✦</div>
+    <br>
+    <p>Se por qualquer motivo você não gostar do material, entre em contato pelo Instagram <strong>@paoDiarioDigital</strong> e resolveremos. Queremos que sua experiência seja de paz — não de dúvida.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <h2>Dúvidas frequentes</h2>
+    <div class="faq-item">
+      <div class="pergunta">Como recebo o ebook após a compra?</div>
+      <div class="resposta">Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link de acesso para baixar o PDF.</div>
+    </div>
+    <div class="faq-item">
+      <div class="pergunta">Precisa ser de alguma denominação específica?</div>
+      <div class="resposta">Não. O devocional é interdenominacional — foi criado para mulheres cristãs de qualquer denominação que desejam se aproximar de Deus.</div>
+    </div>
+    <div class="faq-item">
+      <div class="pergunta">Quanto tempo preciso por dia?</div>
+      <div class="resposta">Em torno de 15 a 20 minutos. Você pode fazer pela manhã ou à noite — o que funcionar melhor para a sua rotina.</div>
+    </div>
+    <div class="faq-item">
+      <div class="pergunta">Quais formas de pagamento são aceitas?</div>
+      <div class="resposta">Cartão de crédito, Pix e boleto bancário — tudo processado de forma segura pela plataforma Kiwify.</div>
+    </div>
+    <div class="faq-item">
+      <div class="pergunta">Posso acessar no celular?</div>
+      <div class="resposta">Sim. O PDF funciona em qualquer dispositivo — celular, tablet ou computador.</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-direct">
+  <div class="container">
+    <h2>Ficou com alguma dúvida?</h2>
+    <p>Fale diretamente comigo pelo Instagram. Será um prazer te atender. 🙏</p>
+    <a href="https://ig.me/m/paoDiarioDigital" class="btn-direct">Falar no Direct →</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Pão Diário Digital · <a href="https://www.instagram.com/paoDiarioDigital" target="_blank">@paoDiarioDigital</a></p>
+</footer>
+
+</body>
+</html>
